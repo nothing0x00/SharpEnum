@@ -153,32 +153,44 @@ namespace enumTest
                 proc6.Start();
 
                 string result1 = proc1.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Hostname");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result1);
                 Console.WriteLine("------------------------------");
                 string result2 = proc2.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("User Account");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result2);
                 Console.WriteLine("------------------------------");
                 string result3 = proc3.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Local User Account Permissions");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result3);
                 Console.WriteLine("------------------------------");
                 string result4 = proc4.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Domain User Account Permissions");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result4);
                 Console.WriteLine("------------------------------");
                 string result5 = proc5.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Local User Group Memberships");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result5);
                 Console.WriteLine("------------------------------");
                 string result6 = proc6.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Domain User Group Memberships");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result6);
                 Console.WriteLine("------------------------------");
@@ -249,32 +261,44 @@ namespace enumTest
                 proc6.Start();
 
                 string result1 = proc1.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Local Network Interfaces");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result1);
                 Console.WriteLine("------------------------------");
                 string result2 = proc2.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("ARP Tables");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result2);
                 Console.WriteLine("------------------------------");
                 string result3 = proc3.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Open Network Interfaces");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result3);
                 Console.WriteLine("------------------------------");
                 string result4 = proc4.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Firewall Status");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result4);
                 Console.WriteLine("------------------------------");
                 string result5 = proc5.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Firewall Configuration");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result5);
                 Console.WriteLine("------------------------------");
                 string result6 = proc6.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Hosts File Content");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result6);
                 Console.WriteLine("------------------------------");
@@ -347,32 +371,44 @@ namespace enumTest
                 proc6.Start();
 
                 string result1 = proc1.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Local Tasks");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result1);
                 Console.WriteLine("------------------------------");
                 string result2 = proc2.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Startup Programs");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result2);
                 Console.WriteLine("------------------------------");
                 string result3 = proc3.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Installed Patches");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result3);
                 Console.WriteLine("------------------------------");
                 string result4 = proc4.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Currently Running Services");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result4);
                 Console.WriteLine("------------------------------");
                 string result5 = proc5.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Program Files Directory Content");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result5);
                 Console.WriteLine("------------------------------");
                 string result6 = proc6.StandardOutput.ReadToEnd();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Program Files (x86) Directory Content");
+                Console.ResetColor();
                 Console.WriteLine("------------------------------");
                 Console.WriteLine(result6);
                 Console.WriteLine("------------------------------");
@@ -387,7 +423,9 @@ namespace enumTest
         public static void cleartext()
         {
             string[] files = { @"C:\unattend.xml", @"C:\Windows\Panther\Unattend.xml", @"C:\Windows\Panther\Unattend\Unattend.xml", @"C:\Windows\system32\sysprep.inf", @"C:\Windows\system32\sysprep\sysprep.xml" };
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Looking for Cleartext Passwords in Common Files...");
+            Console.ResetColor();
             foreach (string f in files)
             {
                 if (File.Exists(f))
@@ -397,7 +435,9 @@ namespace enumTest
                     Console.WriteLine(text);
                 }
             }
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Searching Registry Keys...");
+            Console.ResetColor();
             string[] registries = { @"HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon", @"HKLM\SYSTEM\Current\ControlSet\Services\SNMP", @"HKCU\Software\SimonTatham\PuTTY\Sessions", @"HKCU\Software\ORL\WinVNC3\Password", @"HKEY_LOCAL_MACHINE\SOFTWARE\RealVNC\WinVNC4" };
             foreach (string reg in registries)
             {
@@ -415,7 +455,9 @@ namespace enumTest
                 Console.WriteLine(result);
                 Console.WriteLine("------------------------------");
             }
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Dumping cmdkey Info...");
+            Console.ResetColor();
             string command1 = "cmdkey /list";
             System.Diagnostics.ProcessStartInfo procStartInfo1 = new System.Diagnostics.ProcessStartInfo("cmd", "/C " + command1);
             procStartInfo1.RedirectStandardOutput = true;
@@ -466,16 +508,4 @@ namespace enumTest
 
         }
     }
-
-    //WSL Enumeration
-    //write file output option
-
-    //To Do
-    //Finish initial version
-    //Shorten functions using string arrays and foreach loops
-    //Modularize
-    //Attempt to replicate using windows API calls directly
-
-    //Think about WSL enumeration script
 }
-
